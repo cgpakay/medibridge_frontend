@@ -18,7 +18,7 @@ const Services = () => {
               Easily schedule your appointments online, eliminating the need for
               phone calls or in-person visits.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
@@ -30,7 +30,7 @@ const Services = () => {
               advice, diagnosis, and treatment plans from the comfort of your
               home.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
@@ -41,7 +41,7 @@ const Services = () => {
               Stay connected with your healthcare team through remote monitoring
               devices that track vital signs and health indicators.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
@@ -53,7 +53,7 @@ const Services = () => {
               Request prescription refills online and have your medications
               delivered to your doorstep for convenience.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
@@ -66,7 +66,7 @@ const Services = () => {
               Access and manage your medical records securely online, including
               test results, diagnoses, and treatment history.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
@@ -79,7 +79,7 @@ const Services = () => {
               Access a wealth of educational materials and resources to empower
               yourself with knowledge about your health and wellness.
             </p>
-            <button className="mt-auto bg-primaryColor hover:bg-primaryColor text-white font-bold py-2 px-6 rounded-full">
+            <button className="mt-auto bg-primaryColor hover:bg-primaryColorHover text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
               Learn More
             </button>
           </div>
