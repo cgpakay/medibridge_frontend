@@ -2,11 +2,7 @@ import React from "react";
 import OurServices from "../components/OurServices";
 
 const Services = () => {
-  return (
-    <div>
-      <OurServices />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Services;
