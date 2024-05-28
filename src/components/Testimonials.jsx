@@ -32,13 +32,15 @@ const Testimonials = () => {
             alt="testimonial"
             className="w-32 h-32 rounded-full mb-4 md:mb-0 md:ml-8"
           />
-          <div className="flex flex-col justify-between h-full">
+          <div className="flex flex-col justify-between h-full w-full md:w-auto">
             <p className="text-lg text-gray-700">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
               Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum."
             </p>
-            <p className="font-bold self-end mt-4">-Lauren Winter</p>
+            <p className="font-bold self-start mt-4 md:self-end">
+              -Lauren Winter
+            </p>
           </div>
         </div>
 
