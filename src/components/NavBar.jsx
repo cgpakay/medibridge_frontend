@@ -27,9 +27,9 @@ const NavBar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // style={{ backgroundImage: `url(${headerImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+
   return (
-    <div className='flex justify-between w-full p-4 bg-slate-600' >
+    <div className='flex justify-between w-full p-4 bg-slate-600' style={{ backgroundImage: `url(${headerImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} >
       <div className="pl-6 font-bold text-xl">MediBridge</div>
       <div className="flex">
         {/* <MdMedicalServices />
