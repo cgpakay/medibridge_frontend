@@ -186,8 +186,6 @@ const Signup = () => {
               </div>
 
               <div className="mb-5 flex items-center gap-3">
-                <figure className=""></figure>
-
                 <div className="relative w-[130px] h-[50px]">
                   <input
                     type="file"
