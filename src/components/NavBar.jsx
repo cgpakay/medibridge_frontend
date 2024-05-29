@@ -9,6 +9,7 @@ import { MdLanguage } from "react-icons/md";
 // import { MdLogin } from "react-icons/md";
 
 const NavBar = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMediumScreen, setIsMediumScreen] = useState(false);
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
 import avatar from "../assets/images/avatar-icon.png";
 
-const SignUp = () => {
+const SignUpPatient = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
 
@@ -186,4 +186,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpPatient;

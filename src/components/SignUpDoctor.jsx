@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
 import avatar from "../assets/images/avatar-icon.png";
 
-const SignUp = () => {
+const SignUpDoctor = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    dateOfBirth: "",
     email: "",
     password: "",
+    speciality: "",
+    medRegNr: "",
+    location: "",
+    photo: null,
     gender: "",
+    role: "patient",
   });
 
   const handleInputChange = (event) => {
@@ -64,7 +68,7 @@ const SignUp = () => {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="First Name*"
+                  placeholder="First Name(s)*"
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
@@ -85,18 +89,6 @@ const SignUp = () => {
                   focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
                   placeholder:text-textColor cursor-pointer"
                   required
-                />
-              </div>
-              <div className="mb-5">
-                <input
-                  type="date"
-                  placeholder="Date of Birth*"
-                  name="dateOfBirth"
-                  value={formData.dateOfBirth}
-                  onChange={handleInputChange}
-                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
-                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                  placeholder:text-textColor cursor-pointer"
                 />
               </div>
               <div className="mb-5">
@@ -123,6 +115,43 @@ const SignUp = () => {
                   focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
                   placeholder:text-textColor cursor-pointer"
                   required
+                />
+              </div>
+              <div className="mb-5">
+                <input
+                  type="text"
+                  placeholder="Speciality"
+                  name="speciality"
+                  value={formData.speciality}
+                  onChange={handleInputChange}
+                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
+                  placeholder:text-textColor cursor-pointer"
+                />
+              </div>
+              <div className="mb-5">
+                <input
+                  type="text"
+                  placeholder="Medical Registration Number*"
+                  name="medRegNr"
+                  value={formData.medRegNr}
+                  onChange={handleInputChange}
+                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
+                  placeholder:text-textColor cursor-pointer"
+                  required
+                />
+              </div>
+              <div className="mb-5">
+                <input
+                  type="text"
+                  placeholder="Location"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
+                  placeholder:text-textColor cursor-pointer"
                 />
               </div>
               <div className="mb-5 flex items-center justify-between">
@@ -156,18 +185,9 @@ const SignUp = () => {
                     htmlFor="customFile"
                     className="absolute top-0 left-0 w-full h-full flex items-center px-[0.75rem] py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer"
                   >
-                    Upload Photo
+                    Upload Files
                   </label>
                 </div>
-                {previewURL && (
-                  <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center">
-                    <img
-                      src={previewURL}
-                      alt="avatar"
-                      className="w-full rounded-full"
-                    />
-                  </figure>
-                )}
               </div>
 
               <div className="mb-5">
@@ -186,4 +206,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpDoctor;
