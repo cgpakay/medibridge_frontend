@@ -1,4 +1,6 @@
 import React from "react";
+import Testimonials from "../components/Testimonials";
+import OurServices from "../components/OurServices";
 import icon01 from "../assets/images/icon01.png";
 import icon04 from "../assets/images/icon04.png";
 import icon03 from "../assets/images/icon03.png";
@@ -8,6 +10,8 @@ import { BsArrowRight } from "react-icons/bs";
 const Home = () => {
   return (
     <div>
+      <OurServices />
+      <Testimonials />
       {/* ======= Our Services ======== */}
       <section>
         <div className="container">
