@@ -2,7 +2,6 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Routers from "../routes/Routers";
-import Faq from "../components/Faq/Faq";
 
 const Layout = () => {
   return (
@@ -12,7 +11,6 @@ const Layout = () => {
       <main>
         <Routers />
       </main>
-      <Faq />
       <Footer />
     </>
   );
