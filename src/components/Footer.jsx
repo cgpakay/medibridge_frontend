@@ -63,6 +63,7 @@ const quickLinks03 = [
 ];
 
 const Footer = () => {
+  
   const year = new Date().getFullYear();
 
   return (
