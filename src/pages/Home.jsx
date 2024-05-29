@@ -4,10 +4,12 @@ import OurServices from "../components/OurServices";
 import Faq from "../components/Faq/Faq";
 import StepByStep from "../components/StepByStep";
 import GetVirtualAp from "../components/GetVirtualAp";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <div>
+      <Header />
       <StepByStep />
       <GetVirtualAp />
       <OurServices />
