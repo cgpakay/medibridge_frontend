@@ -1,4 +1,3 @@
-import React from "react";
 import Testimonials from "../components/Testimonials";
 import OurServices from "../components/OurServices";
 import Faq from "../components/Faq/Faq";

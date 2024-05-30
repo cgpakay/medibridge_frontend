@@ -183,7 +183,7 @@ const AboutUs = () => {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-4 text-center">
+        <h2 className="text-3xl font-bold mb-10 text-center">
           Do you have any questions? Contact us
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
