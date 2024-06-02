@@ -6,8 +6,10 @@ import Signup from "../pages/Signup";
 import AboutUs from "../pages/AboutUs";
 import Doctors from "../pages/Doctors/Doctors";
 import DoctorDetails from "../pages/Doctors/DoctorDetails";
+import MyAccount from "../Dashboard/user-account/MyAccount";
 
 import { Routes, Route } from "react-router-dom";
+/* import ProtectedRoute from "./ProtectedRoute"; */
 
 const Routers = () => {
   return (
@@ -19,6 +21,7 @@ const Routers = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/users/profile/me" element={<MyAccount />} />
     </Routes>
   );
 };
