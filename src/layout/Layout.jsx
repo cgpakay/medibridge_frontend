@@ -1,15 +1,15 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
 import Routers from "../routes/Routers";
+/* import Footer from "../components/Footer"; */
 
 const Layout = () => {
   return (
     <>
-      <NavBar />
+      <Header />
       <main>
         <Routers />
       </main>
-      <Footer />
+      {/*       <Footer /> */}
     </>
   );
 };

@@ -1,6 +1,4 @@
-import React from "react";
-
-const Services = () => {
+const OurServices = () => {
   return (
     <div className="bg-white-100 py-12 px-4">
       <div className="container mx-auto bg-white rounded-lg ">
@@ -89,4 +87,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OurServices;

@@ -1,11 +1,10 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import avatarIcon from "../assets/images/avatarIcon.png";
-import avatarIcon2 from "../assets/images/avatarIcon2.png";
-import avatarIcon3 from "../assets/images/avatarIcon3.png";
-import avatarIcon4 from "../assets/images/avatarIcon4.png";
+import avatarIcon from "../../assets/images/avatarIcon.png";
+import avatarIcon2 from "../../assets/images/avatarIcon2.png";
+import avatarIcon3 from "../../assets/images/avatarIcon3.png";
+import avatarIcon4 from "../../assets/images/avatarIcon4.png";
 
 const Testimonials = () => {
   const settings = {
@@ -103,7 +102,7 @@ const Testimonials = () => {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-700 text-center">"{testimonial.quote}"</p>
+              <p className="text-gray-700 text-center">{testimonial.quote}</p>
             </div>
           ))}
         </Slider>
