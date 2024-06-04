@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiMinus } from "react-icons/fi";
 
-const AboutUs = () => {
+const Contact = () => {
   const [form, setForm] = useState({
     email: "",
     subject: "",
@@ -242,4 +242,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Contact;

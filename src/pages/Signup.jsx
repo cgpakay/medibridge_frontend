@@ -1,6 +1,7 @@
 import { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
 import avatarIcon from "../assets/images/avatarIcon.png";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -13,6 +14,8 @@ const Signup = () => {
     email: "",
     password: "",
     gender: "",
+    role: "patient",
+    photo: selectedFile,
   });
 
   const handleInputChange = (event) => {
@@ -127,6 +130,19 @@ const Signup = () => {
               </div>
               <div className="mb-5 flex items-center justify-between">
                 <label className="text-headingColor font-bold text-[16px] leading-7">
+                  Are you a:
+                  <select
+                    name="role"
+                    value={formData.role}
+                    onChange={handleInputChange}
+                    className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                  >
+                    <option value="patient">Patient</option>
+                    <option value="doctor">Doctor</option>
+                  </select>
+                </label>
+
+                <label className="text-headingColor font-bold text-[16px] leading-7">
                   Gender:
                   <select
                     name="gender"
@@ -170,14 +186,25 @@ const Signup = () => {
                 )}
               </div>
 
-              <div className="mb-5">
+              <div className="mt-7">
                 <button
                   type="submit"
-                  className="w-full bg-primaryColor text-white font-bold py-2 rounded-lg"
+                  className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
                 >
                   Sign Up
                 </button>
               </div>
+
+              <p className="mt-5 text-textColor text-center">
+                {" "}
+                Already have an account?{" "}
+                <Link
+                  to="/login"
+                  className="text-primaryColor font-medium ml-1"
+                >
+                  Login
+                </Link>{" "}
+              </p>
             </form>
           </div>
         </div>
