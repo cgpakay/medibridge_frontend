@@ -8,9 +8,7 @@ const Signup = () => {
   const [previewURL, setPreviewURL] = useState("");
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    dateOfBirth: "",
+    name: "",
     email: "",
     password: "",
     gender: "",
@@ -67,39 +65,14 @@ const Signup = () => {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="First Name*"
-                  name="firstName"
+                  placeholder="name*"
+                  name="name"
                   value={formData.firstName}
                   onChange={handleInputChange}
                   className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
                   focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
                   placeholder:text-textColor cursor-pointer"
                   required
-                />
-              </div>
-              <div className="mb-5">
-                <input
-                  type="text"
-                  placeholder="Last Name*"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
-                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                  placeholder:text-textColor cursor-pointer"
-                  required
-                />
-              </div>
-              <div className="mb-5">
-                <input
-                  type="date"
-                  placeholder="Date of Birth*"
-                  name="dateOfBirth"
-                  value={formData.dateOfBirth}
-                  onChange={handleInputChange}
-                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
-                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                  placeholder:text-textColor cursor-pointer"
                 />
               </div>
               <div className="mb-5">
