@@ -1,8 +1,8 @@
-/* import React, { useState } from "react";
+import { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
-import avatar from "../assets/images/avatar-icon.png";
+import avatarIcon from "../assets/images/avatarIcon.png";
 
-const SignUp = () => {
+const Signup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
 
@@ -47,13 +47,14 @@ const SignUp = () => {
     <section className="px-5 xl:px-0">
       <div className="max-w-[1170px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-
+          {/* IMAGE BOX */}
           <div className="hidden lg:block bg-primaryColor rounded-l-lg">
             <figure className="rounded-l-lg">
               <img src={signupImg} alt="" className="w-full rounded-l-lg" />
             </figure>
           </div>
 
+          {/* SIGN UP FORM */}
           <div className="rounded-l-lg lg:pl-16 p-10">
             <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10">
               Create an <span className="text-primaryColor">account</span>
@@ -161,7 +162,7 @@ const SignUp = () => {
                 {previewURL && (
                   <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center">
                     <img
-                      src={previewURL}
+                      src={avatarIcon}
                       alt="avatar"
                       className="w-full rounded-full"
                     />
@@ -185,5 +186,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
- */
+export default Signup;

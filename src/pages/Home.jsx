@@ -3,9 +3,9 @@ import icon04 from "../assets/images/icon04.png";
 import icon03 from "../assets/images/icon03.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
-import heroImg01 from "../assets/images/hero-Img01.png";
-import heroImg02 from "../assets/images/hero-Img02.png";
-import heroImg03 from "../assets/images/hero-Img03.png";
+import heroimg01 from "../assets/images/hero-img01.png";
+import heroimg02 from "../assets/images/hero-img02.png";
+import heroimg03 from "../assets/images/hero-img03.png";
 import Testimonials from "../components/Testimonials/Testimonials";
 import OurServices from "../components/About/OurServices";
 import FaqList from "../components/Faq/FaqList";
@@ -68,11 +68,11 @@ const Home = () => {
 
               <div className="flex gap-[30px] justify-end">
                 <div>
-                  <img className="w-full" src={heroImg01} alt="" />
+                  <img className="w-full" src={heroimg01} alt="" />
                 </div>
                 <div className="mt-[30px]">
-                  <img src={heroImg02} alt="" className="w-full mb-[30px]" />
-                  <img src={heroImg03} alt="" className="w-full mb-[30px]" />
+                  <img src={heroimg02} alt="" className="w-full mb-[30px]" />
+                  <img src={heroimg03} alt="" className="w-full mb-[30px]" />
                 </div>
               </div>
             </div>

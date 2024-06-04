@@ -8,6 +8,7 @@ import DoctorDetails from "../pages/Doctors/DoctorDetails";
 import MyAccount from "../Dashboard/user-account/MyAccount";
 
 import { Routes, Route } from "react-router-dom";
+import Signup from "../pages/Signup";
 /* import ProtectedRoute from "./ProtectedRoute"; */
 
 const Routers = () => {
@@ -18,7 +19,7 @@ const Routers = () => {
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetails />} />
       <Route path="/login" element={<Login />} />
-      {/*       <Route path="/signup" element={<Signup />} /> */}
+      <Route path="/signup" element={<Signup />} />
       <Route path="/about-us" element={<Contact />} />
       <Route path="/services" element={<Services />} />
       <Route path="/users/profile/me" element={<MyAccount />} />
