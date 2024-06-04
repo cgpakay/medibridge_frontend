@@ -1,6 +1,7 @@
 import doctordetails from "../../assets/images/doctor-details.jpg";
 import doctorimg02 from "../../assets/images/doctor-img02.png";
 import doctorimg03 from "../../assets/images/doctor-img03.png";
+import doctorimg01 from "../../assets/images/doctor-img01.png";
 
 /* import doctorimg04 from "../../assets/images/doctor-img04.png";
 import doctorimg05 from "../../assets/images/doctor-img05.png";
@@ -10,7 +11,7 @@ export const doctors = [
   {
     id: "01",
     name: "Dr. Laura Williams",
-    specialization: "Surgeon",
+    specialization: "Pyschologist",
     avgRating: 4.9,
     totalRating: 35,
     photo: doctordetails,
@@ -43,18 +44,19 @@ export const doctors = [
     description:
       "Dr. Michael Lee is a highly skilled surgeon with a specialization in orthopedic surgery. He has successfully performed numerous complex surgeries and is known for his meticulous approach.",
   },
-  /*   {
+  {
     id: "04",
     name: "Dr. Priya Patel",
     specialization: "Pediatrician",
     avgRating: 4.9,
     totalRating: 300,
-    photo: "doctorimg04",
+    photo: doctorimg01,
     totalPatients: 1600,
     hospital: "Children's Health Center",
     description:
       "Dr. Priya Patel is an experienced pediatrician who is passionate about child health. She provides compassionate care for children from infancy through adolescence.",
   },
+  /*   
   {
     id: "05",
     name: "Dr. Robert Johnson",
