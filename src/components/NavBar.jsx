@@ -54,7 +54,7 @@ const NavBar = () => {
               <MdMedicalServices className="text-2xl" />
               &nbsp;
             </Link>
-            <Link to="/searchdoctor">
+            <Link to="/doctors">
               <IoSearchSharp className="text-2xl" />
             </Link>
             <Link to="/language">
