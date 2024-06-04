@@ -1,6 +1,7 @@
-import doctorimg01 from "../../assets/images/doctor-img01.png";
+import doctordetails from "../../assets/images/doctor-details.jpg";
 import doctorimg02 from "../../assets/images/doctor-img02.png";
 import doctorimg03 from "../../assets/images/doctor-img03.png";
+
 /* import doctorimg04 from "../../assets/images/doctor-img04.png";
 import doctorimg05 from "../../assets/images/doctor-img05.png";
 import doctorimg06 from "../../assets/images/doctor-img06.png"; */
@@ -8,15 +9,15 @@ import doctorimg06 from "../../assets/images/doctor-img06.png"; */
 export const doctors = [
   {
     id: "01",
-    name: "Dr. Alfaz Ahmed",
+    name: "Dr. Laura Williams",
     specialization: "Surgeon",
-    avgRating: 4.8,
-    totalRating: 272,
-    photo: doctorimg01,
+    avgRating: 4.9,
+    totalRating: 35,
+    photo: doctordetails,
     totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    hospital: "Müller Counseling Center",
     description:
-      "Dr. Alfaz Ahmed is a highly skilled surgeon known for his expertise in minimally invasive procedures. He has successfully treated a large number of patients with complex surgical needs.",
+      "Dr. Laura Williams is a highly skilled psychologist known for her expertise in Clinical Psychology. With over 10 years of experience, she specializes in cognitive-behavioral therapy.",
   },
   {
     id: "02",

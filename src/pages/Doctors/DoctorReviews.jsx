@@ -35,7 +35,7 @@ const DoctorReviews = () => {
         <div className="flex justify-between gap-10 mb-[30px]">
           <div className="flex gap-3">
             <figure className="w-10 h-10 rounded-full">
-              <img className="w-full" src={avatar} alt="" />
+              <img className="w-full" src={avatarIcon} alt="" />
             </figure>
             <div>
               <h5 className="text-[15px] leading-6 text-primaryColor font-bold">
@@ -58,7 +58,7 @@ const DoctorReviews = () => {
         <div className="flex justify-between gap-10 mb-[30px]">
           <div className="flex gap-3">
             <figure className="w-10 h-10 rounded-full">
-              <img className="w-full" src={avatar} alt="" />
+              <img className="w-full" src={avatarIcon} alt="" />
             </figure>
             <div>
               <h5 className="text-[15px] leading-6 text-primaryColor font-bold">
