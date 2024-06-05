@@ -1,7 +1,7 @@
 import Home from "../pages/Home";
 import Services from "../pages/Services";
 import Login from "../pages/Login";
-import Sighup from "../pages/Signup";
+import Signup from "../pages/Signup";
 import Contact from "../pages/Contact";
 import Doctors from "../pages/Doctors/Doctors";
 import DoctorDetails from "../pages/Doctors/DoctorDetails";
@@ -20,7 +20,7 @@ const Routers = () => {
       <Route path="/doctors/:id" element={<DoctorDetails />} />
       <Route path="/doctor-details" element={<DoctorDetails />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Sighup />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
       <Route

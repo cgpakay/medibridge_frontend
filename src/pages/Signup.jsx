@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
 import { Link } from "react-router-dom";
 
-const Sighup = () => {
+const Signup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
   const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ const Sighup = () => {
     specialization: "",
     medRegNr: "",
     location: "",
-    photo: selectedFile,
+    photo: "",
     gender: "",
     role: "patient",
   });
@@ -36,23 +36,27 @@ const Sighup = () => {
 
   const handleFileInputChange = async (event) => {
     const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewURL(reader.result);
+      };
+      reader.readAsDataURL(file);
 
-    const data = await upLoadImageToCloudinary(file);
-
-    console.log(data);
-
-    setPreviewURL(data.url);
-    setSelectedFile(file);
-    setFormData({
-      ...formData,
-      photo: data.url,
-    });
-
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setPreviewURL(reader.result);
-    };
-    reader.readAsDataURL(file);
+      try {
+        setLoading(true);
+        const data = await upLoadImageToCloudinary(file);
+        setSelectedFile(file);
+        setFormData({
+          ...formData,
+          photo: data.url,
+        });
+        setLoading(false);
+      } catch (error) {
+        toast.error("Failed to upload image.");
+        setLoading(false);
+      }
+    }
   };
 
   const submitHandler = async (event) => {
@@ -61,7 +65,7 @@ const Sighup = () => {
 
     try {
       const response = await fetch(`${BASE_URL}/api/auth/register`, {
-        method: "post",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -80,7 +84,6 @@ const Sighup = () => {
       toast.error(error.message);
       setLoading(false);
     }
-    // Handle form submission logic here
   };
 
   return (
@@ -90,7 +93,11 @@ const Sighup = () => {
           {/* IMAGE BOX */}
           <div className="hidden lg:block bg-primaryColor rounded-l-lg">
             <figure className="rounded-l-lg">
-              <img src={signupImg} alt="" className="w-full rounded-l-lg" />
+              <img
+                src={signupImg}
+                alt="Signup"
+                className="w-full rounded-l-lg"
+              />
             </figure>
           </div>
 
@@ -208,11 +215,11 @@ const Sighup = () => {
               </div>
 
               <div className="mb-5 flex items-center gap-3">
-                {selectedFile && (
+                {previewURL && (
                   <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center">
                     <img
                       src={previewURL}
-                      alt=""
+                      alt="Preview"
                       className="w-full rounded-full"
                     />
                   </figure>
@@ -237,7 +244,7 @@ const Sighup = () => {
 
               <div className="mt-7">
                 <button
-                  disabled={loading && true}
+                  disabled={loading}
                   type="submit"
                   className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
                 >
@@ -250,14 +257,13 @@ const Sighup = () => {
               </div>
 
               <p className="mt-5 text-textColor text-center">
-                {" "}
                 Already have an account?{" "}
                 <Link
                   to="/login"
                   className="text-primaryColor font-medium ml-1"
                 >
                   Login
-                </Link>{" "}
+                </Link>
               </p>
             </form>
           </div>
@@ -267,4 +273,4 @@ const Sighup = () => {
   );
 };
 
-export default Sighup;
+export default Signup;

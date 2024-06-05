@@ -7,9 +7,8 @@ import { HashLoader } from "react-spinners";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
-
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate;
+  const navigate = useNavigate(); // Correctly call useNavigate
   const { dispatch } = useContext(authContext);
 
   const handleChangeInput = (e) => {
@@ -22,7 +21,7 @@ const Login = () => {
 
     try {
       const response = await fetch(`${BASE_URL}/api/auth/login`, {
-        method: "post",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -45,12 +44,11 @@ const Login = () => {
 
       setLoading(false);
       toast.success(result.message);
-      navigate("/home");
+      navigate("/home"); // Use navigate function
     } catch (error) {
       toast.error(error.message);
       setLoading(false);
     }
-    // Handle form submission logic here
   };
 
   return (
@@ -93,11 +91,10 @@ const Login = () => {
           </div>
 
           <p className="mt-5 text-textColor text-center">
-            {" "}
-            Don&apos;t have an account?{" "}
+            Don't have an account?{" "}
             <Link to="/signup" className="text-primaryColor font-medium ml-1">
               Register
-            </Link>{" "}
+            </Link>
           </p>
         </form>
       </div>
