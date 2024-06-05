@@ -1,26 +1,25 @@
 import { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
-import avatar from "../assets/images/avatar-icon.png";
 import upLoadImageToCloudinary from "../utils/uploadCloudinary";
 import { BASE_URL } from "../config";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
+import { Link } from "react-router-dom";
 
-const Signup = () => {
+const Sighup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     password: "",
-    speciality: "",
+    specialization: "",
     medRegNr: "",
     location: "",
-    photo: null,
+    photo: selectedFile,
     gender: "",
     role: "patient",
   });
@@ -105,22 +104,9 @@ const Signup = () => {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="First Name(s)*"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
-                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                  placeholder:text-textColor cursor-pointer"
-                  required
-                />
-              </div>
-              <div className="mb-5">
-                <input
-                  type="text"
-                  placeholder="Last Name*"
-                  name="lastName"
-                  value={formData.lastName}
+                  placeholder="Name(s)*"
+                  name="name"
+                  value={formData.name}
                   onChange={handleInputChange}
                   className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
                   focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
@@ -157,9 +143,9 @@ const Signup = () => {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="Speciality"
-                  name="speciality"
-                  value={formData.speciality}
+                  placeholder="Specialization"
+                  name="specialization"
+                  value={formData.specialization}
                   onChange={handleInputChange}
                   className="w-full pr-4 border-b border-solid border-[#0066ff61] focus:outline-none 
                   focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
@@ -281,4 +267,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Sighup;
