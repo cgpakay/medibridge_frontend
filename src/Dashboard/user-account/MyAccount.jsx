@@ -3,7 +3,7 @@ import { authContext } from "../../context/AuthContext";
 import Profile from "./Profile";
 import MyBookings from "./MyBookings";
 import Loading from "../../components/Loader/Loading";
-import useGetProfile from "../../hooks/useFetchData";
+import useFetchData from "../../hooks/useFetchData"; // Corrected import
 import { BASE_URL } from "../../config";
 import Error from "../../components/Error/Error";
 
@@ -15,14 +15,14 @@ const MyAccount = () => {
     data: userData,
     loading,
     error,
-  } = useGetProfile(`${BASE_URL}/users/profile/me`);
+  } = useFetchData(`${BASE_URL}/users/profile/me`);
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
 
   if (loading) return <Loading />;
-  if (error) return <Error errMessage={"error"} />;
+  if (error) return <Error errMessage={error} />;
 
   return (
     <section>
@@ -32,7 +32,7 @@ const MyAccount = () => {
             <div className="flex items-center justify-center">
               <figure className="w-[100px] h-[100px] rounded-full border-2 border-solid border-primaryColor">
                 <img
-                  src={userData?.photo}
+                  src={userData?.photo || "default_image_path"} // Handle null case
                   alt=""
                   className="w-full h-full rounded-full"
                 />
@@ -41,15 +41,15 @@ const MyAccount = () => {
 
             <div className="text-center mt-4">
               <h3 className="text-[18px] leading-[30px] text-headingColor font-bold">
-                {userData?.name}
+                {userData?.name || "User Name"}
               </h3>
               <p className="text-textColor text-[15px] leading-6 font-medium">
-                {userData?.email}
+                {userData?.email || "email@example.com"}
               </p>
               <p className="text-textColor text-[15px] leading-6 font-medium">
                 Blood Type:
                 <span className="ml-2 text-headingColor text-[22px]">
-                  {userData?.bloodType}
+                  {userData?.bloodType || "N/A"}
                 </span>
               </p>
             </div>
