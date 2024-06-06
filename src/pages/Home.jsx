@@ -10,9 +10,6 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import OurServices from "../components/About/OurServices";
 import FaqList from "../components/Faq/FaqList";
 import faqImg from "../assets/images/faq-img.png";
-import Footer from "../components/Footer/Footer";
-import DoctorCard from "../components/Doctors/DoctorCard";
-import DoctorList from "../components/Doctors/DoctorList";
 
 const Home = () => {
   return (
