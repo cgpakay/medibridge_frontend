@@ -1,34 +1,40 @@
-import useFetchData from "../../hooks/useFetchData";
-import { BASE_URL } from "../../config";
-import DoctorCard from "../../components/Doctors/DoctorCard";
-import Loading from "../../components/Loader/Loading";
-import Error from "../../components/Error/Error";
+import { BASE_URL } from "./../../config";
+
+import DoctorCard from "./../../components/Doctors/DoctorCard";
+import useFetchData from "./../../hooks/useFetchData";
+import HashLoader from "react-spinners/HashLoader";
 
 const MyBookings = () => {
   const {
-    data: appointments,
+    data: myAppointments,
     loading,
     error,
   } = useFetchData(`${BASE_URL}/users/appointments/my-appointments`);
 
+  console.log(myAppointments);
+
   return (
     <div>
-      {Loading && !error && <Loading />}
-
-      {error && !loading && <Error errMessage={"error"} />}
-
-      {!loading && !error && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {appointments.map((doctor) => (
-            <DoctorCard doctor={doctor} key={doctor._id} />
-          ))}
+      {loading && (
+        <div className="flex items-center justify-center w-full h-full">
+          <HashLoader color="#0067FF" />
         </div>
       )}
 
-      {!loading && !error && appointments.length === 0 && (
-        <h2 className="mt-5 text-center leading-7 test-[20px] font-semibold text-primaryColor">
-          You did not book any doctor yet!
-        </h2>
+      {error && (
+        <div className="flex items-center justify-center w-full h-full">
+          <h3 className="text-headingColor text-[20px] font-semibold leading-[30px]">
+            {error}
+          </h3>
+        </div>
+      )}
+
+      {!loading && !error && (
+        <div className="grid grid-cols-1  lg:grid-cols-2 gap-5">
+          {myAppointments?.map((doctor) => (
+            <DoctorCard doctor={doctor} key={doctor.id} />
+          ))}
+        </div>
       )}
     </div>
   );

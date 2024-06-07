@@ -1,9 +1,7 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { token } from "../config";
-/* import { toast } from "react-toastify"; */
 
-const UseFetchData = (url) => {
+const useFetchData = (url) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -11,28 +9,33 @@ const UseFetchData = (url) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-
       try {
-        const res = await fetch(url, {
-          headers: { Authorization: `bearer ${token}` },
+        const response = await fetch(url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         });
+        console.log("HERE?", response);
 
-        const result = await res.json();
+        const result = await response.json();
+        console.log("RESULT IN EFFECT: ", result);
 
-        if (!res.ok) {
-          throw new Error(
-            result.message + "Sorry, not possible to access data"
-          );
+        if (!response.ok) {
+          throw new Error(result.message + ". Back Off");
         }
+
         setData(result.data);
         setLoading(false);
       } catch (err) {
-        setLoading(false);
         setError(err.message);
+        setLoading(false);
       }
     };
+
     fetchData();
   }, [url]);
+
+  // console.log("IN HOOK FETCH: ", data);
 
   return {
     data,
@@ -41,4 +44,4 @@ const UseFetchData = (url) => {
   };
 };
 
-export default UseFetchData;
+export default useFetchData;

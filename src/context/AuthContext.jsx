@@ -1,38 +1,45 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
-import { initializedState } from "react-slick/lib/utils/innerSliderUtils";
+/* eslint-disable react/prop-types */
+import { createContext, useEffect, useReducer } from "react";
 
-const initialState = {
-  user: null,
-  role: null,
-  token: null,
+const initial_state = {
+  user:
+    localStorage.getItem("user") !== undefined
+      ? JSON.parse(localStorage.getItem("user"))
+      : null,
+  token: localStorage.getItem("token") || "",
+  role: localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))?.role
+    : "",
 };
 
-export const authContext = createContext(initialState);
+export const AuthContext = createContext(initial_state);
 
-const authReducer = (state, action) => {
+const AuthReducer = (state, action) => {
   switch (action.type) {
     case "LOGIN_START":
       return {
-        user:
-          localStorage.getItem("user") !== undefined
-            ? JSON.parse(localStorage.getItem("user"))
-            : null,
-        role: localStorage.getItem("role") || null,
-        token: localStorage.getItem("token") || null,
+        user: null,
+        token: "",
+        role: "",
       };
-
     case "LOGIN_SUCCESS":
       return {
         user: action.payload.user,
-        role: action.payload.token,
-        token: action.payload.role,
+        token: action.payload.token,
+        role: action.payload.role,
+      };
+    case "LOGIN_FAILURE":
+      return {
+        user: null,
+        token: "",
+        role: "",
       };
 
     case "LOGOUT":
       return {
         user: null,
-        role: null,
-        token: null,
+        token: "",
+        role: "",
       };
 
     default:
@@ -41,16 +48,18 @@ const authReducer = (state, action) => {
 };
 
 export const AuthContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(authReducer, initialState);
+  const [state, dispatch] = useReducer(AuthReducer, initial_state);
+
+  console.log("STATE", state);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
     localStorage.setItem("token", state.token);
-    localStorage.setItem("role", state.role);
+    // localStorage.setItem("role", state.user.role);
   }, [state]);
 
   return (
-    <authContext.Provider
+    <AuthContext.Provider
       value={{
         user: state.user,
         token: state.token,
@@ -59,6 +68,6 @@ export const AuthContextProvider = ({ children }) => {
       }}
     >
       {children}
-    </authContext.Provider>
+    </AuthContext.Provider>
   );
 };
