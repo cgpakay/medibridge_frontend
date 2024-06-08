@@ -26,9 +26,6 @@ const MyAccount = () => {
     navigate("/login");
   };
 
-  console.log("user data", userData);
-  console.log("dispatch", dispatch);
-
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">

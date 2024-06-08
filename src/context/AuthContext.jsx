@@ -26,7 +26,7 @@ const AuthReducer = (state, action) => {
       return {
         user: action.payload.user,
         token: action.payload.token,
-        role: action.payload.role,
+        role: action.payload.user.role,
       };
     case "LOGIN_FAILURE":
       return {
@@ -50,12 +50,9 @@ const AuthReducer = (state, action) => {
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, initial_state);
 
-  console.log("STATE", state);
-
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
     localStorage.setItem("token", state.token);
-    // localStorage.setItem("role", state.user.role);
   }, [state]);
 
   return (
