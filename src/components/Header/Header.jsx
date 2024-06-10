@@ -25,7 +25,7 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const { user, token, role } = useContext(AuthContext);
+  const { user, token } = useContext(AuthContext);
 
   const headerRef = useRef(null);
   const menuRef = useRef(null);
@@ -87,7 +87,7 @@ const Header = () => {
               <div>
                 <Link
                   to={
-                    role && role === "doctor"
+                    user.role === "doctor"
                       ? `${"/doctors/profile/me"}`
                       : `${"/users/profile/me"}`
                   }

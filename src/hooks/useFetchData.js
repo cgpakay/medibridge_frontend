@@ -12,16 +12,15 @@ const useFetchData = (url) => {
       try {
         const response = await fetch(url, {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
-        console.log("HERE?", response);
 
         const result = await response.json();
-        console.log("RESULT IN EFFECT: ", result);
+        console.log("RESULT IN EFFECT: ", response);
 
         if (!response.ok) {
-          throw new Error(result.message + ". Back Off");
+          throw new Error(result.message + "Back Off");
         }
 
         setData(result.data);

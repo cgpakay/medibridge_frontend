@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { BASE_URL, token } from "../../config";
+import { BASE_URL } from "../../config";
 import uploadImageToCloudinary from "../../utils/uploadCloudinary";
 import { AiOutlineDelete } from "react-icons/ai";
 
@@ -23,7 +23,8 @@ const Profile = ({ doctorData }) => {
     specialization: "",
     timeSlots: [],
   });
-
+  const token = localStorage.getItem("token");
+  console.log("TOKEN FROM PROFILE", token);
   useEffect(() => {
     setFormData({
       name: doctorData?.name,
