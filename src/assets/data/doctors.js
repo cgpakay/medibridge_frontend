@@ -1,5 +1,5 @@
-import doctordetails from "../../assets/images/doctor-details.jpg";
-import doctorimg02 from "../../assets/images/doctor-img02.png";
+import doctordetails from "../../assets/images/red-hair-doc.png";
+import doctorimg02 from "../../assets/images/bearded-male-doctor.png";
 import doctorimg03 from "../../assets/images/doctor-img03.png";
 import doctorimg01 from "../../assets/images/doctor-img01.png";
 
