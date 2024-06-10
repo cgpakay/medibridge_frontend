@@ -14,7 +14,7 @@ const Testimonials = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3500,
     responsive: [
       {
         breakpoint: 1024,
@@ -98,7 +98,7 @@ const Testimonials = () => {
                     viewBox="0 0 24 24"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M12 18l-6 3.79V10l6 -4.49 6 4.49v11.8l-6 -3.79" />
+                    <path d="M12 17.25l-6.472 3.673 1.24-7.224-5.258-5.127 7.262-1.057L12 .75l3.228 6.765 7.262 1.057-5.258 5.127 1.24 7.224z" />
                   </svg>
                 ))}
               </div>
