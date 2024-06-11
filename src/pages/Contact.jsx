@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-4 md:px-16 lg:px-32 bg-slate-100">
+    <div className="px-4 md:px-16 lg:px-32 bg-white">
       <section className="mb-12">
         <h2 className="text-3xl font-bold mb-12 text-center">About Us</h2>
         <div className="max-w-3xl mx-auto">

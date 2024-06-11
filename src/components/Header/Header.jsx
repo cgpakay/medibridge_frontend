@@ -70,8 +70,8 @@ const Header = () => {
                     to={link.path}
                     className={(navClass) =>
                       navClass.isActive
-                        ? "text-[#0067FF] font-[600] text-[16px] leading-7"
-                        : "text-textColor font-[500] text-[16px] leading-7"
+                        ? "text-[#0067FF] font-[800] text-[16px] leading-7"
+                        : "text-textColor font-[800] text-[16px] leading-7"
                     }
                   >
                     {link.display}
@@ -102,11 +102,19 @@ const Header = () => {
                 </Link>
               </div>
             ) : (
-              <Link to="/login">
-                <button className="bg-primaryColor py-2 px-6 rounded-[50px] text-white font-[600] h-[44px] flex items-center justify-center">
-                  Log In
-                </button>
-              </Link>
+              <>
+                <Link to="/login">
+                  <button className="bg-primaryColor py-2 px-6 rounded-[50px] text-white font-[600] h-[44px] flex items-center justify-center">
+                    Log In
+                  </button>
+                </Link>
+
+                <Link to="/register">
+                  <button className="bg-primaryColor py-2 px-6 rounded-[50px] text-white font-[600] h-[44px] flex items-center justify-center">
+                    Sign up
+                  </button>
+                </Link>
+              </>
             )}
 
             <span className="md:hidden" onClick={toggleMenu}>
