@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.png";
+import logomedibridge from "../../assets/images/logo_medibridge.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { useContext, useEffect, useRef } from "react";
@@ -57,8 +57,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* =========== logo ========== */}
           <div>
-            {/* <img src={logo} alt="logo" /> */}
-            <h3>MediBridge</h3>
+            <img
+              src={logomedibridge}
+              alt="logo"
+              className="max-w-full h-auto w-[100px] lg:w-[150px]"
+            />
+            {/* <h3>MediBridge</h3> */}
           </div>
 
           {/* ========== nav menu =========== */}

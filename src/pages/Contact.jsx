@@ -21,10 +21,10 @@ const Contact = () => {
 
   return (
     <div className="px-4 md:px-16 lg:px-32 bg-white">
-      <section className="mb-12">
+      <section className="mb-12 pt-8 pb-2">
         <h2 className="text-3xl font-bold mb-12 text-center">About Us</h2>
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold mb-12 text-center">
+          <h3 className="text-lg font-semibold mb-20 text-center">
             At MedIBridge, we are revolutionizing the healthcare sector in
             Germany by providing a platform that connects doctors and patients
             seamlessly. Our mission is to overcome language barriers and
@@ -33,7 +33,7 @@ const Contact = () => {
           </h3>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center mb-8">
-          <div className="md:w-1/2 p-4">
+          <div className="flex flex-col md:w-1/2 p-8 gap-4 border-2 rounded-xl shadow-md">
             <h3 className="text-2xl font-semibold mb-2">Purpose (Why?)</h3>
             <p>
               Improve the health and well-being of the population by eliminating
@@ -76,7 +76,7 @@ const Contact = () => {
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <div className="md:w-1/2 p-4 order-1 md:order-2">
+          <div className="flex flex-col md:w-1/2 p-8 gap-4 order-1 md:order-2 border-2 rounded-xl shadow-md">
             <h3 className="text-2xl font-semibold mb-2">Vision (How?)</h3>
             <p>
               Our vision is to be the leading platform in providing seamless and
@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center mb-8">
-          <div className="md:w-1/2 p-4">
+          <div className="flex flex-col md:w-1/2 p-8 gap-4 border-2 rounded-xl shadow-md">
             <h3 className="text-2xl font-semibold mb-2">Mission (What?)</h3>
             <p>
               Our mission is to develop and implement advanced technologies that
@@ -117,7 +117,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="mb-12 bg-slate-200 rounded-lg">
+      <section className="mb-2 border-2 rounded-xl shadow-md">
         <h2 className="text-3xl font-bold mb-4 text-center">Our Journey</h2>
         <div className="flex justify-center mb-8">
           <div className="flex items-center">
