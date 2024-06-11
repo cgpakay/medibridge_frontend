@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import FeedbackForm from "./FeedbackForm";
+import ReviewForm from "./ReviewForm";
 import { useState } from "react";
 import { formatDate } from "../../utils/formDate";
 import { AiFillStar } from "react-icons/ai";
 
-const Feedback = ({ reviews, totalRating }) => {
+const Review = ({ reviews, totalRating }) => {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -45,16 +45,16 @@ const Feedback = ({ reviews, totalRating }) => {
       {!showForm && (
         <div className="text-center">
           <button className="btn" onClick={() => setShowForm(true)}>
-            Give Feedback
+            Leave a Review
           </button>
         </div>
       )}
 
       {/* ========== tour reviews section end =========== */}
 
-      {showForm && <FeedbackForm />}
+      {showForm && <ReviewForm />}
     </div>
   );
 };
 
-export default Feedback;
+export default Review;
