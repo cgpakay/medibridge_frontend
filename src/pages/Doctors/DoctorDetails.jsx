@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 // import doctorImg from "../../assets/images/doctor-img02.png";
 import starIcon from "../../assets/images/Star.png";
@@ -8,6 +9,7 @@ import { BASE_URL } from "../../config";
 import useFetchData from "../../hooks/useFetchData";
 import { useParams } from "react-router-dom";
 import HashLoader from "react-spinners/HashLoader";
+import DoctorCalendar from "./DoctorCalender";
 
 const DoctorDetails = () => {
   const [tab, setTab] = useState("about");
@@ -121,11 +123,12 @@ const DoctorDetails = () => {
               </div>
             </div>
             <div>
-              <SidePanel
+              <DoctorCalendar />
+              {/* <SidePanel
                 doctorId={doctor._id}
                 ticketPrice={ticketPrice}
                 timeSlots={timeSlots}
-              />
+              /> */}
             </div>
           </div>
         )}
