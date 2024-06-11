@@ -3,7 +3,7 @@ import heroimg from "../assets/images/heroimg.png";
 //import heroImg01 from "../assets/images/hero-img01.png";
 // import heroImg02 from "../assets/images/hero-img02.png";
 // import heroImg03 from "../assets/images/hero-img03.png";
-import icon01 from "../assets/images/icon01.png";
+import icon05 from "../assets/images/icon05.png";
 import icon04 from "../assets/images/icon04.png";
 import icon03 from "../assets/images/icon03.png";
 import faqImg from "../assets/images/faq-doctor-img.png";
@@ -157,7 +157,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img src={icon01} alt="" />
+                <img src={icon05} alt="" width={185} height={185} />
               </div>
               <div className="mt-[30px]">
                 <h2 className="tet-[26px] leading-9 text-headingColor font-[700] text-center">
