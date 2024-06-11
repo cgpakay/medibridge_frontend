@@ -88,7 +88,7 @@ const Home = () => {
                 <h1 className="text-headingColor text-[36px] leading-[46px] md:text-[60px] md:leading-[70px] font-[800] ">
                   Online doctor consultations made easy
                 </h1>
-                <p className="text__para pt-5">
+                <p className="text__para pt-8">
                   MediBridge connects patients with doctors for online
                   consultations, providing expert solutions for various diseases
                   and health issues. Access professional medical advice and care
