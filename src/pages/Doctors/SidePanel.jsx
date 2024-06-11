@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import convertTime from "../../utils/convertTime";
-import { BASE_URL, token } from "./../../config";
+import { BASE_URL } from "./../../config";
 
 const SidePanel = ({ ticketPrice, timeSlots, doctorId }) => {
   const bookingHandler = async () => {
@@ -11,7 +11,7 @@ const SidePanel = ({ ticketPrice, timeSlots, doctorId }) => {
         {
           method: "post",
           headers: {
-            Authorization: `Bearer ${token} `,
+            Authorization: `Bearer ${localStorage.getItem("token")} `,
           },
         }
       );
