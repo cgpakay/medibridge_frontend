@@ -5,6 +5,7 @@ import {
   RiFacebookFill,
   RiInstagramFill,
 } from "react-icons/ri";
+import logomedibridge from "../../assets/images/logo_medibridge.png";
 
 const socialLinks = [
   {
@@ -26,27 +27,27 @@ const socialLinks = [
 ];
 
 const quickLinks01 = [
-  {
-    path: "/home",
-    display: "Home",
-  },
-  {
-    path: "/services",
-    display: "Services",
-  },
+  // {
+  //   path: "/home",
+  //   display: "Home",
+  // },
   {
     path: "/",
+    display: "How it works",
+  },
+  {
+    path: "/contact",
     display: "About us",
   },
 ];
 
 const quickLinks02 = [
   {
-    path: "/find-a-doctor",
+    path: "/doctors",
     display: "Find a Doctor",
   },
   {
-    path: "/",
+    path: "/login",
     display: "Book an Appointment",
   },
 ];
@@ -54,24 +55,27 @@ const quickLinks02 = [
 const quickLinks03 = [
   {
     path: "/",
-    display: "Donate",
+    display: "FAQ",
   },
   {
-    path: "/about-us",
+    path: "/contact",
     display: "Contact us",
   },
 ];
 
 const Footer = () => {
-  
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pb-16 pt-10 bg-gray-100">
+    <footer className="pb-16 pt-10 bg-customBackground">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full lg:w-2/5 mb-6 lg:mb-0">
-            <p className="text-primaryColor font-bold">MediBridge</p>
+            <img
+              src={logomedibridge}
+              alt="logo"
+              className="max-w-full h-auto w-[100px] lg:w-[150px]"
+            />
             <p className="text-[16px] leading-7 font-[400] text-textColor">
               Copyright © {year} developed by Cahide, Jonas, Hinal, Lucas,
               Ophelia. All rights reserved.
@@ -90,7 +94,7 @@ const Footer = () => {
           </div>
           <div className="hidden lg:block ">
             <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
-              Quick Links
+              Overview
             </h2>
             <ul>
               {quickLinks01.map((item, index) => (
@@ -107,7 +111,7 @@ const Footer = () => {
           </div>
           <div className="hidden lg:block ">
             <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
-              I want to
+              Services
             </h2>
             <ul>
               {quickLinks02.map((item, index) => (
@@ -124,7 +128,7 @@ const Footer = () => {
           </div>
           <div className="hidden lg:block ">
             <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
-              Support
+              Resources
             </h2>
             <ul>
               {quickLinks03.map((item, index) => (
