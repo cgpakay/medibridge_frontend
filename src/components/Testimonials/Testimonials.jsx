@@ -1,10 +1,15 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import avatarIcon from "../../assets/images/avatarIcon.png";
+/* import avatarIcon from "../../assets/images/avatarIcon.png";
 import avatarIcon2 from "../../assets/images/avatarIcon2.png";
 import avatarIcon3 from "../../assets/images/avatarIcon3.png";
-import avatarIcon4 from "../../assets/images/avatarIcon4.png";
+import avatarIcon4 from "../../assets/images/avatarIcon4.png"; */
+import avatarIcon from "../../assets/images/avatarIcon.jpg";
+import avatarIcon2 from "../../assets/images/avatarIcon2.jpg";
+import avatarIcon3 from "../../assets/images/avatarIcon3.jpg";
+import avatarIcon4 from "../../assets/images/avatarIcon4.jpg";
+import avatarIcon5 from "../../assets/images/avatarIcon5.jpg";
 
 const Testimonials = () => {
   const settings = {
