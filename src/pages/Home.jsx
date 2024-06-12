@@ -165,7 +165,7 @@ const Home = () => {
                 </h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
                   Easily search and find the right doctor for your needs from
-                  our network of qualified healthcare professionals.
+                  our network of qualified healthcare professionals quickly.
                 </p>
 
                 <Link
