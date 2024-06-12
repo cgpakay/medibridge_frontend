@@ -46,7 +46,7 @@ const Profile = ({ userData }) => {
         method: "put",
         headers: {
           "content-type": "application/json",
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
 
         body: JSON.stringify(formData),
