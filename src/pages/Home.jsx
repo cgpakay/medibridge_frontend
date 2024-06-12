@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import heroimg from "../assets/images/heroimg.png";
-//import heroImg01 from "../assets/images/hero-img01.png";
-// import heroImg02 from "../assets/images/hero-img02.png";
-// import heroImg03 from "../assets/images/hero-img03.png";
+import heroimg from "../assets/images/hero-tablet.png";
+import heroImg01 from "../assets/images/hero-doc.png";
+import heroImg02 from "../assets/images/hero-pat1.png";
+import heroImg03 from "../assets/images/hero-pat2.png";
 import icon05 from "../assets/images/icon05.png";
 import icon04 from "../assets/images/icon04.png";
 import icon03 from "../assets/images/icon03.png";
@@ -190,7 +190,7 @@ const Home = () => {
                 </p>
 
                 <Link
-                  to="/doctors"
+                  to="/register"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />

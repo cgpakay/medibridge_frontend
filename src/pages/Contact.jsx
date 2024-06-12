@@ -25,7 +25,7 @@ const Contact = () => {
         <h2 className="text-3xl font-bold mb-12 text-center">About Us</h2>
         <div className="max-w-3xl mx-auto">
           <h3 className="text-lg font-semibold mb-20 text-center">
-            At MedIBridge, we are revolutionizing the healthcare sector in
+            At MediBridge, we are revolutionizing the healthcare sector in
             Germany by providing a platform that connects doctors and patients
             seamlessly. Our mission is to overcome language barriers and
             scheduling conflicts, making access to healthcare easier and more
@@ -232,7 +232,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-primaryColor text-white rounded hover:bg-blue-600"
           >
             Send Message
           </button>

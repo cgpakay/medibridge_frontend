@@ -56,14 +56,16 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           {/* =========== logo ========== */}
-          <div>
-            <img
-              src={logomedibridge}
-              alt="logo"
-              className="max-w-full h-auto w-[100px] lg:w-[150px]"
-            />
-            {/* <h3>MediBridge</h3> */}
-          </div>
+          <Link to="/">
+            <div>
+              <img
+                src={logomedibridge}
+                alt="logo"
+                className="max-w-full h-auto w-[100px] lg:w-[150px]"
+              />
+              {/* <h3>MediBridge</h3> */}
+            </div>
+          </Link>
 
           {/* ========== nav menu =========== */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
@@ -108,7 +110,7 @@ const Header = () => {
             ) : (
               <>
                 <Link to="/login">
-                  <button className="bg-primaryColor py-2 px-6 rounded-[50px] text-white font-[600] h-[44px] flex items-center justify-center">
+                  <button className="bg-white py-2 px-6 rounded-[50px] text-primaryColor font-[600] h-[44px] flex items-center justify-center border border-primaryColor border-solid">
                     Log In
                   </button>
                 </Link>

@@ -71,11 +71,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full lg:w-2/5 mb-6 lg:mb-0">
-            <img
-              src={logomedibridge}
-              alt="logo"
-              className="max-w-full h-auto w-[100px] lg:w-[150px]"
-            />
+            <Link to="/">
+              <img
+                src={logomedibridge}
+                alt="logo"
+                className="max-w-full h-auto w-[100px] lg:w-[150px]"
+              />
+            </Link>
             <p className="text-[16px] leading-7 font-[400] text-textColor">
               Copyright © {year} developed by Cahide, Jonas, Hinal, Lucas,
               Ophelia. All rights reserved.

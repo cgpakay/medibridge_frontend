@@ -39,7 +39,7 @@ const DoctorCard = ({ doctor }) => {
         </div>
       </div>
 
-      <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
+      {/* <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
         <div>
           <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold">
             + {totalPatients} patients
@@ -53,6 +53,26 @@ const DoctorCard = ({ doctor }) => {
           className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] flex items-center justify-center group hover:bg-primaryColor hover:border-none"
         >
           <BsArrowRight className="group-hover:text-white w-6 h-5" />
+        </Link>
+      </div> */}
+      {/* New code fom ux */}
+      <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
+        {/* <div>
+          <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold">
+            + {totalPatients} patients
+          </h3>
+          <p className="tex-[14px] leading-6 font-[400] text-textColor">
+            At {hospital}
+          </p>
+        </div> */}
+        <Link
+          to={`/doctors/${doctor.id}`}
+          // className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+        >
+          <button className="border border-solid border-primaryColor py-2 px-6 hover:bg-primaryColor rounded-full">
+            Book an Appointment
+          </button>
+          {/* <BsArrowRight className="group-hover:text-white w-6 h-5" /> */}
         </Link>
       </div>
     </div>
