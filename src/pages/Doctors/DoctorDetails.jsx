@@ -3,7 +3,7 @@ import { useState } from "react";
 // import doctorImg from "../../assets/images/doctor-img02.png";
 import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from "./DoctorAbout";
-import Feedback from "./Feedback";
+import Review from "./Review";
 import SidePanel from "./SidePanel";
 import { BASE_URL } from "../../config";
 import useFetchData from "../../hooks/useFetchData";
@@ -93,13 +93,13 @@ const DoctorDetails = () => {
                     About
                   </button>
                   <button
-                    onClick={() => setTab("feedback")}
+                    onClick={() => setTab("Review")}
                     className={`${
-                      tab === "feedback" &&
+                      tab === "Review" &&
                       "border-b border-solid border-[#0067FF]"
                     } py-2 px-5  font-semibold text-headingColor text-[16px] leading-7 `}
                   >
-                    Feedback
+                    Reviews
                   </button>
                 </div>
               </div>
@@ -115,9 +115,9 @@ const DoctorDetails = () => {
                     />
                   </div>
                 )}
-                {tab === "feedback" && (
+                {tab === "Review" && (
                   <div>
-                    <Feedback reviews={reviews} totalRating={totalRating} />
+                    <Review reviews={reviews} totalRating={totalRating} />
                   </div>
                 )}
               </div>

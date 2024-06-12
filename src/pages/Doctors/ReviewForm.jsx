@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
 import { useParams } from "react-router-dom";
 
-const FeedbackForm = () => {
+const ReviewForm = () => {
   const [rating, setRating] = useState(0);
   const [reviewText, setReviewText] = useState("");
   const [hover, setHover] = useState(0);
@@ -82,7 +82,7 @@ const FeedbackForm = () => {
 
       <div className="mt-[30px]">
         <p className="text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0">
-          Share your feedback or suggestions*
+          Share your review or suggestions*
         </p>
         <textarea
           className="border border-solid border-[#0066ff34] focus:outline outline-[#0067FF] w-full px-4 py-3 rounded-md"
@@ -95,10 +95,10 @@ const FeedbackForm = () => {
         ></textarea>
       </div>
       <button type="submit" onClick={handleReviewSubmit} className="btn">
-        {loading ? <HashLoader size={25} color="#fff" /> : "Submit Feedback"}
+        {loading ? <HashLoader size={25} color="#fff" /> : "Submit a Review"}
       </button>
     </form>
   );
 };
 
-export default FeedbackForm;
+export default ReviewForm;

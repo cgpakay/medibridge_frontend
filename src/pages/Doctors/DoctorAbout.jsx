@@ -5,12 +5,12 @@ const DoctorAbout = ({ about, name, qualifications, experiences }) => {
   return (
     <div>
       <div>
-        <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex gap-2 items-center">
+        {/* <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex gap-2 items-center">
           About of
           <span className="text-irisBlueColor font-bold text-[24px] leading-9">
             {name}
           </span>
-        </h3>
+        </h3> */}
         <p className="text__para">{about}</p>
       </div>
 
